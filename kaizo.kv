@@ -1,0 +1,27 @@
+#:import MDTextField kivymd.uix.textfield.MDTextField
+#:import MDFlatButton kivymd.uix.button.MDFlatButton
+
+MDScreen:
+
+    MDTextField:
+        id: ip_input
+        hint_text: "Enter IP"
+        pos_hint: {"center_x": .5, "top": .8}
+        size_hint_x: .8
+
+    MDTextField:
+        id: results
+        multiline: True
+        pos_hint: {"center_x": .5, "top": .6}
+        size_hint_y: None
+        height: 200
+
+    MDFlatButton:
+        text: "Lookup"
+        pos_hint: {"center_x": .5, "y": .4}
+        on_release: app.lookup_ip()
+
+    MDFlatButton:
+        text: "About"
+        pos_hint: {"center_x": .2, "y": .1}
+        on_release: app.show_about()
